@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-Hans">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,6 +11,9 @@
   <link rel="alternate icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="canonical" href="https://sbtitool.github.io/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://sbtitool.github.io/" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://sbtitool.github.io/zh-hant.html" />
+  <link rel="alternate" hreflang="x-default" href="https://sbtitool.github.io/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="sbtitool - 免费在线 SBTI 测试与 15 维结果分析" />
   <meta property="og:description" content="在线完成 SBTI 测试，查看人格类型、十五维度评分说明和结果海报。" />
@@ -97,6 +100,43 @@
       max-width: 980px;
       margin: 0 auto;
       padding: 24px 16px 56px;
+    }
+
+    .language-switch {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 8px;
+    }
+
+    .language-switch nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: 0 10px 24px rgba(47, 73, 55, 0.08);
+      backdrop-filter: blur(8px);
+    }
+
+    .language-switch a {
+      text-decoration: none;
+      color: var(--accent-strong);
+      font-size: 13px;
+      line-height: 1;
+      padding: 10px 14px;
+      border-radius: 999px;
+      transition: background .16s ease, color .16s ease;
+    }
+
+    .language-switch a:hover {
+      background: var(--soft);
+    }
+
+    .language-switch a[aria-current="page"] {
+      background: var(--accent-strong);
+      color: #fff;
     }
 
     .card {
@@ -831,6 +871,12 @@
 </head>
 <body>
   <main class="shell">
+    <div class="language-switch">
+      <nav aria-label="语言切换">
+        <a href="https://sbtitool.github.io/" aria-current="page">简体中文</a>
+        <a href="https://sbtitool.github.io/zh-hant.html">繁體中文</a>
+      </nav>
+    </div>
     <section id="intro" class="screen active">
       <div class="hero card">
         <div class="eyebrow">sbtitool 在线测试平台</div>
