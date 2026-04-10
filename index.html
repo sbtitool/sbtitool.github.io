@@ -3,7 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SBTI 人格测试</title>
+  <title>SBTI 测试 - 免费在线人格测试与 15 维结果分析</title>
+  <meta name="description" content="SBTI 测试是一个免费的在线人格测试工具，提供 30 道核心题、补充题、15 个维度评分、人格类型匹配和结果海报展示，支持手机与电脑快速完成测试。" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="author" content="蛆肉儿串儿" />
+  <link rel="canonical" href="https://sbti.unun.dev/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SBTI 测试 - 免费在线人格测试与 15 维结果分析" />
+  <meta property="og:description" content="在线完成 SBTI 人格测试，查看人格类型、十五维度评分说明和结果海报。" />
+  <meta property="og:url" content="https://sbti.unun.dev/" />
+  <meta property="og:site_name" content="SBTI 测试" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta name="twitter:card" content="summary" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "name": "SBTI 测试",
+          "url": "https://sbti.unun.dev/",
+          "inLanguage": "zh-CN",
+          "description": "免费的在线 SBTI 人格测试网站，支持生成十五维度评分和人格测试结果。"
+        },
+        {
+          "@type": "WebPage",
+          "name": "SBTI 测试 - 免费在线人格测试与 15 维结果分析",
+          "url": "https://sbti.unun.dev/",
+          "inLanguage": "zh-CN",
+          "description": "SBTI 测试提供在线人格测试、维度评分说明、人格类型结果和结果海报展示。",
+          "isPartOf": {
+            "@type": "WebSite",
+            "name": "SBTI 测试",
+            "url": "https://sbti.unun.dev/"
+          },
+          "about": {
+            "@type": "Thing",
+            "name": "SBTI 人格测试"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "SBTI 测试是什么？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "SBTI 测试是一个偏娱乐向的在线人格测试页面，用户答题后可以获得人格类型、十五维度评分说明和结果海报。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "完成 SBTI 测试后可以看到什么？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "完成测试后可以查看你的主类型名称、匹配度、十五维度评分解读，以及对应的人格结果图片。"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  </script>
   <style>
     :root {
       --bg: #f6faf6;
@@ -139,6 +201,86 @@
     .hero-actions-single {
       justify-content: center;
       margin-top: 28px;
+    }
+
+    .meta-list {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .meta-list a {
+      color: var(--accent-strong);
+    }
+
+    .seo-section {
+      margin-top: 22px;
+      padding: 24px;
+    }
+
+    .seo-section h2 {
+      font-size: 26px;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .seo-section > p {
+      color: #304034;
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .seo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .seo-item {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      background: linear-gradient(180deg, #ffffff, #fbfdfb);
+    }
+
+    .seo-item h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .seo-item p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.85;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .faq-item {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px 18px;
+      background: #fff;
+    }
+
+    .faq-item h3 {
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    .faq-item p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
     }
 
     button {
@@ -667,7 +809,8 @@
 
 @media (max-width: 860px) {
       .hero-grid,
-      .result-hero {
+      .result-hero,
+      .seo-grid {
         grid-template-columns: 1fr;
       }
       .dim-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -675,7 +818,7 @@
 
     @media (max-width: 600px) {
       .shell { padding: 14px 12px 42px; }
-      .hero, .test-wrap, .result-wrap { padding: 16px; }
+      .hero, .test-wrap, .result-wrap, .seo-section { padding: 16px; }
       .hero h1 { font-size: 32px; }
       .question-title { font-size: 15px; }
       .dim-grid,
@@ -684,26 +827,73 @@
   </style>
 </head>
 <body>
-  <div class="shell">
+  <main class="shell">
     <section id="intro" class="screen active">
-      <div class="hero card hero-minimal">
-        <h1>MBTI已经过时，SBTI来了。</h1>
-        <div class="hero-actions hero-actions-single">
+      <div class="hero card">
+        <div class="eyebrow">免费在线 SBTI 测试</div>
+        <h1>SBTI 测试：在线完成人格测试并查看 15 维结果分析</h1>
+        <p class="sub">SBTI 测试是一个偏娱乐向的在线人格测试网站。你可以通过 30 道核心题目和补充题，快速获取人格类型、十五维度评分说明和专属结果海报。整套测试覆盖 15 个维度、5 组人格切面，以及 25 个常规结果与 2 个特殊结果，适合在手机和电脑上直接完成测试。</p>
+        <div class="hero-actions">
           <button id="startBtn" class="btn-primary">开始测试</button>
         </div>
-        <div style="padding-top: 2rem; display: flex; flex-direction: column;">
-          <span>
-            原作者：
-            <a href="https://space.bilibili.com/417038183">B站@蛆肉儿串儿</a>
-          </span>
-          <span>
-            托管：Cloudflare (免费)
-          </span>
-          <span>
-            域名：Spaceship (自费)
-          </span>
+        <div class="hero-grid">
+          <div class="mini-panel">
+            <h3>这个网站可以做什么</h3>
+            <ul>
+              <li>在线完成 SBTI 人格测试并即时生成结果。</li>
+              <li>查看人格类型名称、匹配度和十五维度评分说明。</li>
+              <li>在测试完成后展示对应的人格海报和简要解读。</li>
+            </ul>
+          </div>
+          <div class="mini-panel">
+            <h3>测试特点</h3>
+            <ul>
+              <li>无需注册，打开网页即可开始答题。</li>
+              <li>支持移动端和桌面端浏览，页面加载轻量。</li>
+              <li>测试结果仅供娱乐参考，不作为专业心理诊断依据。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="meta-list">
+          <span>原作者：<a href="https://space.bilibili.com/417038183">B站@蛆肉儿串儿</a></span>
+          <span>托管：Cloudflare</span>
+          <span>域名：Spaceship</span>
         </div>
       </div>
+
+      <section class="seo-section card" aria-labelledby="intro-about-title">
+        <h2 id="intro-about-title">SBTI 测试网站说明</h2>
+        <p>SBTI 测试页面聚焦于“快速答题 + 即时展示结果”的体验。进入页面后，用户可以直接开始答题，系统会根据十五个维度的得分情况，匹配对应的人格类型，并展示简要描述、维度解释和图片结果。这类内容有助于用户在一次访问中完整理解这个网站的功能，也更方便搜索引擎识别页面主题。</p>
+        <p>从内容结构上看，这个网站同时具备在线测试、结果展示和说明页三种属性。首页会清楚说明 SBTI 测试是什么、能测什么、测完后能看到什么，从而让搜索引擎更容易判断这是一个围绕 SBTI 人格测试构建的主题页面，而不仅仅是一张按钮式落地页。</p>
+        <div class="seo-grid">
+          <article class="seo-item">
+            <h3>在线测试功能</h3>
+            <p>网站提供完整的 SBTI 在线测试流程，用户无需下载应用，也不需要登录，即可在浏览器中完成答题并查看结果。</p>
+          </article>
+          <article class="seo-item">
+            <h3>结果解读功能</h3>
+            <p>测试结束后，页面会展示人格类型、匹配度、十五维度评分与文字解读，帮助用户更快理解自己的测试结果。</p>
+          </article>
+          <article class="seo-item">
+            <h3>娱乐分享属性</h3>
+            <p>本页面以娱乐体验为主，测试文案和人格设定带有风格化表达，适合朋友之间互动分享和轻量浏览。</p>
+          </article>
+        </div>
+        <div class="faq-list" aria-label="SBTI 测试常见问题">
+          <div class="faq-item">
+            <h3>SBTI 测试是什么？</h3>
+            <p>SBTI 测试是一个在线人格测试页面，侧重娱乐化体验，通过题目回答生成类型结果、维度说明和结果海报。</p>
+          </div>
+          <div class="faq-item">
+            <h3>SBTI 和 MBTI 有什么区别？</h3>
+            <p>MBTI 更偏经典人格分类表达，SBTI 则更贴近中文互联网语境和日常行为描述。这个页面更强调娱乐体验、维度落点和风格化人格结果。</p>
+          </div>
+          <div class="faq-item">
+            <h3>完成测试后能看到哪些内容？</h3>
+            <p>完成 SBTI 测试后，你可以看到人格类型名称、匹配度、十五维度评分解释，以及对应的人格图片和解读文案。</p>
+          </div>
+        </div>
+      </section>
     </section>
 
     <section id="test" class="screen">
@@ -778,7 +968,7 @@
       </div>
     </section>
 
-  </div>
+  </main>
 
   
   <script>
